@@ -1,22 +1,19 @@
 <p align="center">
-  <img src="./assets/banner.png" width="100%" alt="Taje Dine Sidi Mohamed — Étudiant Ingénieur Cloud & Réseaux @ Université de Rennes"/>
+  <img src="./assets/banner.png" width="100%" alt="Taje Dine Sidi Mohamed — Étudiant en Master 1 Cloud & Réseaux @ Université de Rennes"/>
 </p>
 
 <h3 align="center">👋 Taje Dine Sidi Mohamed — <i>TIJO</i></h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Recherche-Stage_Cloud_%C2%B7_DevOps_%C2%B7_R%C3%A9seaux-2EA043?style=for-the-badge" alt="Recherche de stage Cloud, DevOps, Réseaux"/>
+  <img src="https://img.shields.io/badge/Recherche-Stage_M1_Cloud_%C2%B7_DevOps_%C2%B7_R%C3%A9seaux-2EA043?style=for-the-badge" alt="Recherche de stage M1 Cloud, DevOps, Réseaux"/>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/TON-PROFIL/">
+  <a href="https://www.linkedin.com/in/taje-dine-sidi-mohamed-5828a8341/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-  <a href="mailto:ton.email@exemple.com">
+  <a href="mailto:tajedinesidimohamed@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-  <a href="https://TON-PORTFOLIO.com">
-    <img src="https://img.shields.io/badge/Portfolio-161B22?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/>
   </a>
   <img src="https://img.shields.io/badge/Rennes,_France-161B22?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Rennes, France"/>
 </p>
@@ -27,22 +24,23 @@
 
 ```console
 $ systemctl status tijo.service
-● tijo.service - Taje Dine Sidi Mohamed · Cloud & Network Engineering Student
-     Loaded: loaded (/etc/universite-de-rennes/cloud-reseaux.conf; enabled)
-     Active: active (running) — disponible pour un stage
+● tijo.service - Taje Dine Sidi Mohamed · M1 Cloud & Networks Student
+     Loaded: loaded (/etc/universite-de-rennes/master-cloud-reseaux.conf; enabled)
+     Active: active (running) — disponible pour un stage de M1
    Main PID: 2026 (curiosity)
       Tasks: Cloud · DevOps · Réseaux · Observabilité
-     Memory: Linux, Docker, Kubernetes, Nginx, Kafka, Wireshark
-     CGroup: /formation/ingenieur-cloud-reseaux
-             ├─ microservices-ha.service          ● running
-             ├─ network-lab.service               ● running
-             ├─ elk-monitoring.service            ● starting
-             └─ stage.target                      ● waiting for offers
+     Memory: Linux, Docker, Kubernetes, Nginx, Kafka, ELK, Spring Boot
+     CGroup: /projets
+             ├─ microservices-ha-cluster.service   ● active
+             ├─ elk-log-monitoring.service         ● active
+             ├─ kafka-streaming-pipeline.service   ● active
+             ├─ network-automation-lab.service     ● starting
+             └─ aws-multi-tier-terraform.service   ○ planned
 
 $ journalctl -u tijo.service --no-pager | tail -4
-[INFO]  Objectif : concevoir des infrastructures de bout en bout, du câble au cloud
-[INFO]  Approche : automatiser, versionner, superviser
-[INFO]  Langues  : Français · Arabe · Anglais
+[INFO]  Expérience : 2 stages back-end (Spring Boot, RabbitMQ, Docker, MongoDB)
+[INFO]  Objectif   : concevoir des infrastructures de bout en bout, du câble au cloud
+[INFO]  Langues    : Arabe · Français · Anglais (B2)
 [OK]    Prêt à rejoindre une équipe Cloud / DevOps / Réseau en stage
 ```
 
@@ -90,6 +88,12 @@ $ journalctl -u tijo.service --no-pager | tail -4
   <img src="https://img.shields.io/badge/MapReduce-66CCFF?style=flat-square&logo=apachehadoop&logoColor=black" alt="MapReduce"/>
 </p>
 
+### ⚙️ Back-end & Bases de données
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=java,spring,rabbitmq,mongodb,postgres,mysql&theme=dark" alt="Java, Spring Boot, RabbitMQ, MongoDB, PostgreSQL, MySQL"/>
+</p>
+
 ### 📈 Observabilité — Stack ELK
 
 <p align="left">
@@ -106,62 +110,27 @@ $ journalctl -u tijo.service --no-pager | tail -4
   <img src="https://img.shields.io/badge/BGP-1F6FEB?style=for-the-badge" alt="BGP"/>
 </p>
 
-> Appris en construisant les projets ci-dessous.
-
----
-
-## 🏗️ Vision : une infrastructure de bout en bout
-
-```mermaid
-flowchart LR
-    U["👤 Utilisateurs"] --> DNS["DNS"]
-    DNS --> LB["Nginx<br/>Load Balancer (TLS)"]
-    LB --> S1["Microservice A"]
-    LB --> S2["Microservice B"]
-    LB --> S3["Microservice C"]
-    S1 & S2 & S3 --> K["Apache Kafka<br/>Streaming"]
-    K --> P["Traitement<br/>Python / MapReduce"]
-    S1 & S2 & S3 -. logs .-> E["Stack ELK<br/>Supervision"]
-
-    subgraph AWS["☁️ AWS VPC"]
-        LB
-        S1
-        S2
-        S3
-        K
-        P
-        E
-    end
-```
-
 ---
 
 ## 🚀 Projets phares — Hybride Cloud & Réseaux
 
 | Projet | Description | Stack | Statut |
 |:--|:--|:--|:--:|
-| 🔀 **[Microservices High-Availability Cluster](https://github.com/tajedinesidimohamed/microservices-ha-cluster)** | Architecture microservices derrière un load balancer avec tolérance aux pannes : un serveur tombe, le trafic bascule automatiquement. | Docker · Nginx · HAProxy · Linux | 🛠️ En cours |
-| 📈 **[ELK Log Monitoring](https://github.com/tajedinesidimohamed/elk-log-monitoring)** | Centralisation des logs de serveurs et d'équipements réseau, détection d'anomalies et dashboards Kibana. | Elasticsearch · Logstash · Kibana · Docker | 🛠️ En cours |
-| 🌐 **[Enterprise Network Automation Lab](https://github.com/tajedinesidimohamed/network-automation-lab)** | Réseau d'entreprise segmenté (VLANs, DNS, DHCP, OSPF puis BGP), configuré par Ansible et validé par scripts de tests. | Ansible · Python · Linux · Wireshark | 🛠️ En cours |
-| ☁️ **[Cloud Multi-Tier Infra (AWS)](https://github.com/tajedinesidimohamed/aws-multi-tier-terraform)** | Infra VPC sécurisée provisionnée par code : subnets publics/privés, tables de routage, passerelles NAT. | Terraform · AWS · VPC | 🛠️ En cours |
-| ⚡ **[Realtime Kafka Streaming Pipeline](https://github.com/tajedinesidimohamed/kafka-streaming-pipeline)** | Pipeline distribué de flux de données en temps réel entre plusieurs nœuds serveurs, avec traitement des données. | Kafka · MapReduce · Python · Docker | 🛠️ En cours |
-
-> 💡 Chaque projet est documenté avec un schéma d'architecture, les étapes de déploiement et des captures de démonstration.
+| 🔀 **[Microservices High-Availability Cluster](https://github.com/tajedinesidimohamed/microservices-ha-cluster)** | Architecture microservices derrière un load balancer Nginx en HTTPS : un serveur tombe, le trafic bascule automatiquement. | Docker · Nginx · TLS · Kubernetes | ✅ Terminé |
+| 📈 **[ELK Log Monitoring](https://github.com/tajedinesidimohamed/elk-log-monitoring)** | Centralisation des logs web, dashboards Kibana et détection d'une attaque par force brute simulée. | Elasticsearch · Logstash · Kibana · Filebeat | ✅ Terminé |
+| ⚡ **[Realtime Kafka Streaming Pipeline](https://github.com/tajedinesidimohamed/kafka-streaming-pipeline)** | Cluster Kafka à 3 brokers tolérant aux pannes, consommateurs en parallèle et analyse MapReduce. | Kafka · Python · MapReduce · Docker | ✅ Terminé |
+| 🌐 **[Enterprise Network Automation Lab](https://github.com/tajedinesidimohamed/network-automation-lab)** | Réseau d'entreprise segmenté (VLANs, DNS, DHCP, OSPF, BGP), configuré par Ansible et validé par des tests. | Containerlab · FRR · Ansible · Python | 🛠️ En cours |
+| ☁️ **Cloud Multi-Tier Infra (AWS)** | VPC sécurisé provisionné par code : subnets publics/privés, routage, ALB. | Terraform · AWS | 📅 Prochainement |
 
 ---
 
 ## 📊 Statistiques GitHub
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=tajedinesidimohamed&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true" alt="Statistiques GitHub"/>
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=tajedinesidimohamed&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&hide_rank=true&hide=issues,contribs" alt="Statistiques GitHub"/>
   <img height="170" src="https://streak-stats.demolab.com?user=tajedinesidimohamed&theme=github-dark-blue&hide_border=true" alt="Série de contributions"/>
 </p>
 
-<p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=tajedinesidimohamed&theme=github-compact&hide_border=true&area=true" alt="Graphique d'activité"/>
-</p>
-
-<!-- Serpent de contributions : nécessite le fichier .github/workflows/snake.yml -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tajedinesidimohamed/tajedinesidimohamed/output/github-snake-dark.svg"/>
@@ -174,8 +143,4 @@ flowchart LR
 
 <p align="center">
   <i>« Automatiser, versionner, superviser : du câble au cloud. »</i>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=tajedinesidimohamed&color=2EA043&style=flat-square&label=Visites+du+profil" alt="Visites du profil"/>
 </p>
